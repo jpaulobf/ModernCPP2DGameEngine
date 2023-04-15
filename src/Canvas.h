@@ -1,5 +1,8 @@
+#pragma once
+
 #include <iostream>
-#include <SDL.h>
+#define SDL_MAIN_HANDLED
+#include "include\SDL2\SDL.h"
 
 class Canvas {
 
@@ -17,4 +20,8 @@ class Canvas {
         void render();
 
         SDL_Renderer* getRenderer();
+
+    private:
+        SDL_Window* window;
+        SDL_Renderer* renderer;
 };
