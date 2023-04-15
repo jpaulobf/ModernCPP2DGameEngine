@@ -2,18 +2,32 @@
 #include "Canvas.cpp"
 #include "GameEngine.cpp"
 
+/**
+ * Class representing the Game (uses Canvas & GameEngine)
+ */
 class MyGame {
     public:
-        MyGame() {
+        /**
+         * Constructor 
+         */
+        MyGame(int targetFPS) {
             gameEngine = new GameEngine(new Canvas("Meu Jogo 2D", 800, 600));
         }
 
+        /**
+         * Destructor
+         */
         ~MyGame() {
+            //clear game engine memory
             gameEngine->~GameEngine();
+
+            //delete member variable
             delete gameEngine;
-            //delete canvas;
         }
 
+        /**
+         * Run the GameEngine
+         */
         void run() {
             gameEngine->run();
         }
@@ -22,9 +36,12 @@ class MyGame {
         GameEngine* gameEngine;
 };
 
-int main(int argc, char* argv[])
-{
-    MyGame jogo;
-    jogo.run();
+
+/**
+ * Run
+ */
+int main(int argc, char* argv[]) {
+    MyGame *jogo = new MyGame(60);
+    jogo->run();
     return 0;
 }
