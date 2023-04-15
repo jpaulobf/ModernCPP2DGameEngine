@@ -3,7 +3,6 @@
 //------------------------IMPL-------------------------------------
 
 GameEngine::GameEngine(Canvas* canvas) {
-    std::cout << "AA";
     this->canvas = canvas;
 }
 

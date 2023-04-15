@@ -2,7 +2,7 @@
 
 #include <iostream>
 #define SDL_MAIN_HANDLED
-#include "include\SDL2\SDL.h"
+#include <SDL2/SDL.h>
 
 class Canvas {
 

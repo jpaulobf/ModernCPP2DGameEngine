@@ -19,7 +19,7 @@ class MeuJogo {
         GameEngine* gameEngine;
 };
 
-int main(int argsc, char const *args[])
+int main(int argc, char* argv[])
 {
     MeuJogo *jogo = new MeuJogo();
     return 0;
