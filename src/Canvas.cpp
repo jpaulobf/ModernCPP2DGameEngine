@@ -24,7 +24,7 @@ void Canvas::present() {
 
 void Canvas::update(float frametime) {
     // Atualize a lógica específica do canvas aqui
-    std::cout << "Update do Canvas - Frametime: " << frametime << " segundos" << std::endl;
+    //std::cout << "Update do Canvas - Frametime: " << frametime << " segundos" << std::endl;
 }
 
 void Canvas::render() {

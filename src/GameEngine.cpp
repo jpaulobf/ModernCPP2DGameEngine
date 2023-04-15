@@ -8,11 +8,12 @@ GameEngine::GameEngine(Canvas* canvas) {
 
 GameEngine::~GameEngine() {
     // Faça a limpeza dos recursos do jogo aqui
+    delete canvas;
 }
 
 void GameEngine::update(float frametime) {
     // Atualize a lógica do jogo aqui
-    std::cout << "Update do Jogo - Frametime: " << frametime << " segundos" << std::endl;
+    //std::cout << "Update do Jogo - Frametime: " << frametime << " segundos" << std::endl;
 
     // Chame o método update do Canvas
     canvas->update(frametime);
