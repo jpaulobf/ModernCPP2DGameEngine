@@ -1,9 +1,10 @@
-#include "GameEngine.h"
+#include "./h/GameEngine.h"
 
 //------------------------IMPL-------------------------------------
 
-GameEngine::GameEngine(Canvas* canvas) {
+GameEngine::GameEngine(Canvas* canvas, int targetFPS) {
     this->canvas = canvas;
+    this->targetFPS = targetFPS;
 }
 
 GameEngine::~GameEngine() {

@@ -1,4 +1,4 @@
-#include "MyGame.h"
+#include "./h/MyGame.h"
 #include "Canvas.cpp"
 #include "GameEngine.cpp"
 
@@ -11,7 +11,8 @@ class MyGame {
          * Constructor 
          */
         MyGame(int targetFPS) {
-            gameEngine = new GameEngine(new Canvas("Meu Jogo 2D", 800, 600));
+            canvas = new Canvas("Meu Jogo 2D", 800, 600);
+            gameEngine = new GameEngine(canvas, targetFPS);
         }
 
         /**
@@ -23,6 +24,12 @@ class MyGame {
 
             //delete member variable
             delete gameEngine;
+
+            //clear canvas memory
+            canvas->~Canvas();
+
+            //delete canvas
+            delete canvas;
         }
 
         /**
@@ -33,6 +40,7 @@ class MyGame {
         }
 
     private:
+        Canvas* canvas; 
         GameEngine* gameEngine;
 };
 
