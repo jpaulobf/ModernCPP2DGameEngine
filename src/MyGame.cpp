@@ -1,4 +1,4 @@
-#include "./h/MyGame.h"
+#include "MyGame.h"
 #include "Canvas.cpp"
 #include "GameEngine.cpp"
 
