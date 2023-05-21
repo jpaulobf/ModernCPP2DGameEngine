@@ -1,4 +1,4 @@
-#include "./h/GameEngine.h"
+#include "GameEngine.h"
 
 //------------------------IMPL-------------------------------------
 
